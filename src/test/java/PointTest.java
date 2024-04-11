@@ -17,6 +17,11 @@ public class PointTest {
         assertEquals(test.getY(), 8);
     }
     @Test
+    public void testPrazanKonstruktor() {
+        Point test = new Point();
+        assertNotEquals(test, null);
+    }
+    @Test
     public void testSelectable() {
         Point test = new Point(6,5,true);
         assertTrue(test.isSelectable());
