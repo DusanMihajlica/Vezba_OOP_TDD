@@ -40,4 +40,11 @@ public class Point {
     {
         return this.selectable;
     }
+
+
+    public double rastojanje(int x, int y){
+        double X = (double) x;
+        double Y = (double) y;
+        return Math.sqrt((X-getX())*(X-getX()) + (Y-getY())*(Y-getY()));
+    }
 }

@@ -35,4 +35,9 @@ public class PointTest {
         assertEquals(test.getY(), 5);
         assertFalse(test.isSelectable());
     }
+    @Test
+    public void testMetodaRastojanja() {
+        Point test = new Point(5, 5);
+        assertEquals(test.rastojanje(2, 5), 3.0);
+    }
 }
