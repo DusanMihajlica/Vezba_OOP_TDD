@@ -64,4 +64,13 @@ public class Point {
     public String toString(){
         return "(" +this.x + "," +this.y + "," +this.selectable + ")";
     }
+    public boolean equalse(Point tacka){
+        if(this.x == tacka.getX() && this.y == tacka.getY() && this.selectable ==tacka.isSelectable())
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }

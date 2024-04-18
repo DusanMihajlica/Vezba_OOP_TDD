@@ -57,4 +57,11 @@ public class PointTest {
         String test1 = "(5,6,false)";
         assertEquals(test.toString(), test1);
     }
+    @Test
+    public void testEqualse() {
+        Point test = new Point(5, 6, false);
+        Point test1 = new Point(5, 6, false);
+        assertTrue(test.equalse(test1));
+    }
+
 }
