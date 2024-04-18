@@ -82,5 +82,12 @@ public class PointTest {
         test.moveBy(3, 3);
         assertTrue(test.equalse(test1));
     }
+    @Test
+    public void testCompareTo() {
+        Point test = new Point(3, 4);
+        Point test1 = new Point(3, 4);
+        assertEquals(test.comapreTo(test1), 0 );
+    }
+
 
 }

@@ -1,5 +1,5 @@
 import java.awt.Graphics;
-public class Point extends Shape implements Movable{
+public class Point extends Shape {
 
     private int x;
     private int y;
@@ -30,11 +30,11 @@ public class Point extends Shape implements Movable{
     public void SetY(int y){
         this.y=y;
     }
-    public double getX() {
+    public int getX() {
         return this.x;
     }
 
-    public double getY() {
+    public int getY() {
         return this.y;
     }
     public boolean isSelectable()
@@ -43,16 +43,16 @@ public class Point extends Shape implements Movable{
     }
 
 
-    public double rastojanje(double x, double y){
-        double X = (double) x;
-        double Y = (double) y;
+    public double rastojanje(int x, int y){
+        int X =  x;
+        int Y =  y;
         return Math.sqrt((X-getX())*(X-getX()) + (Y-getY())*(Y-getY()));
     }
 
     public boolean Sadrzi(Point tacka)
     {
-        double x = tacka.getX();
-        double y = tacka.getY();
+        int x = tacka.getX();
+        int y = tacka.getY();
         if(this.rastojanje(x, y)<=2)
         {
             return true;
@@ -93,6 +93,10 @@ public class Point extends Shape implements Movable{
     public void draw(Graphics g) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'draw'");
+    }
+    @Override
+    public double comapreTo(Point point1) {
+        return Math.abs(this.rastojanje(0, 0) - point1.rastojanje(0, 0));
     }
     
 }
