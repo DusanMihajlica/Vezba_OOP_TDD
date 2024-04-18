@@ -81,8 +81,8 @@ public class Point extends Shape implements Movable{
     }
     @Override
     public void moveBy(int byX, int byY) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'moveBy'");
+        this.x = this.x +byX;
+        this.y = this.y + byY;
     }
     @Override
     public boolean contains(int x, int y) {
