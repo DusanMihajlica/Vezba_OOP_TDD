@@ -63,5 +63,10 @@ public class PointTest {
         Point test1 = new Point(5, 6, false);
         assertTrue(test.equalse(test1));
     }
+    @Test
+    public void testInstaceOfShape() {
+        assertTrue(Shape.class.isAssignableFrom(Point.class));
+        assertFalse(Point.class.isAssignableFrom(Shape.class));
+    }
 
 }
