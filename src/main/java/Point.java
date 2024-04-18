@@ -1,7 +1,7 @@
 public class Point {
 
-    private double x;
-    private double y;
+    private int x;
+    private int y;
     private boolean selectable;
 
     public Point(){
@@ -59,5 +59,9 @@ public class Point {
         else{
             return false;
         }
+    }
+
+    public String toString(){
+        return "(" +this.x + "," +this.y + "," +this.selectable + ")";
     }
 }

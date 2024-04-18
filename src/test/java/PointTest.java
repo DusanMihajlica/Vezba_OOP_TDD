@@ -9,6 +9,11 @@ public class PointTest {
         assertEquals(test.getY(), 7);
     }
     @Test
+    public void testBoolean() {
+        Point test = new Point(6, 7, true);
+        assertTrue(test.isSelectable());
+    }
+    @Test
     public void testSeter() {
         Point test = new Point();
         test.SetX(6);
@@ -45,5 +50,11 @@ public class PointTest {
         Point test = new Point(5, 5);
         Point test1 = new Point(5, 6);
         assertTrue(test.Sadrzi(test1));
+    }
+    @Test
+    public void testToString() {
+        Point test = new Point(5, 6, false);
+        String test1 = "(5,6,false)";
+        assertEquals(test.toString(), test1);
     }
 }
