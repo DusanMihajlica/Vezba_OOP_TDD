@@ -99,4 +99,5 @@ public class Point extends Shape {
         return Math.abs(this.rastojanje(0, 0) - point1.rastojanje(0, 0));
     }
     
+    
 }

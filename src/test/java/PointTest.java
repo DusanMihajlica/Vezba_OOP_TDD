@@ -1,5 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import java.awt.Graphics;
 
 public class PointTest {
     @Test
@@ -87,6 +88,14 @@ public class PointTest {
         Point test = new Point(3, 4);
         Point test1 = new Point(3, 4);
         assertEquals(test.comapreTo(test1), 0 );
+    }
+    @Test
+    public void testDrawDefault() {
+        Point test = new Point(3, 4);
+        Graphics g = new Graphics() {
+            
+        };
+        assertEquals(test.draw();)
     }
 
 
