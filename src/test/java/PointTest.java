@@ -40,4 +40,10 @@ public class PointTest {
         Point test = new Point(5, 5);
         assertEquals(test.rastojanje(2, 5), 3.0);
     }
+    @Test
+    public void testPripadanja() {
+        Point test = new Point(5, 5);
+        Point test1 = new Point(5, 6);
+        assertTrue(test.Sadrzi(test1));
+    }
 }

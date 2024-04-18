@@ -1,7 +1,7 @@
 public class Point {
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private boolean selectable;
 
     public Point(){
@@ -42,9 +42,22 @@ public class Point {
     }
 
 
-    public double rastojanje(int x, int y){
+    public double rastojanje(double x, double y){
         double X = (double) x;
         double Y = (double) y;
         return Math.sqrt((X-getX())*(X-getX()) + (Y-getY())*(Y-getY()));
+    }
+
+    public boolean Sadrzi(Point tacka)
+    {
+        double x = tacka.getX();
+        double y = tacka.getY();
+        if(this.rastojanje(x, y)<=2)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
