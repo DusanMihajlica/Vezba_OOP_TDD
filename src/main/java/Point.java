@@ -1,4 +1,5 @@
-public class Point extends Shape {
+import java.awt.Graphics;
+public class Point extends Shape implements Movable{
 
     private int x;
     private int y;
@@ -73,4 +74,25 @@ public class Point extends Shape {
             return false;
         }
     }
+    @Override
+    public void moveTo(int x, int y) {
+        this.x =x;
+        this.y =y;
+    }
+    @Override
+    public void moveBy(int byX, int byY) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'moveBy'");
+    }
+    @Override
+    public boolean contains(int x, int y) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'contains'");
+    }
+    @Override
+    public void draw(Graphics g) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'draw'");
+    }
+    
 }
