@@ -1,6 +1,11 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.image.BufferedImage;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class PointTest {
     @Test
@@ -90,13 +95,38 @@ public class PointTest {
         assertEquals(test.comapreTo(test1), 0 );
     }
     @Test
-    public void testDrawDefault() {
-        Point test = new Point(3, 4);
-        Graphics g = new Graphics() {
-            
-        };
-        assertEquals(test.draw();)
+    public void testColorOfUnselectedPoint() {
+
+          Point point = new Point(100, 100, false);
+
+          BufferedImage image = new BufferedImage(200, 200, BufferedImage.TYPE_INT_RGB);
+  
+
+          Graphics g = image.getGraphics();
+  
+ 
+          point.draw(g);
+    
+          assertEquals(Color.BLACK, g.getColor());
+        
     }
+
+    @Test
+    public void testColorOfSelectedPoint() {
+
+        Point point = new Point(100, 100, true);
+
+        BufferedImage image = new BufferedImage(200, 200, BufferedImage.TYPE_INT_RGB);
+
+
+        Graphics g = image.getGraphics();
+
+
+        point.draw(g);
+  
+        assertEquals(Color.BLUE, g.getColor());
+      
+  }
 
 
 }

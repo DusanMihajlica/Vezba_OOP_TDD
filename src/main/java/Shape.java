@@ -1,4 +1,5 @@
 import java.awt.Graphics;
+import java.awt.Color;
 public abstract class Shape implements Movable{
     
     protected boolean selected;

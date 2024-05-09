@@ -1,4 +1,5 @@
 import java.awt.Graphics;
+import java.awt.Color;
 public class Point extends Shape {
 
     private int x;
@@ -91,8 +92,15 @@ public class Point extends Shape {
     }
     @Override
     public void draw(Graphics g) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'draw'");
+        if(this.selectable==true)
+        {
+            g.setColor(Color.BLUE);
+        }
+        else{
+            g.setColor(Color.BLACK);
+        }
+
+        g.drawLine(this.x, this.y, this.x, this.y);
     }
     @Override
     public double comapreTo(Point point1) {
